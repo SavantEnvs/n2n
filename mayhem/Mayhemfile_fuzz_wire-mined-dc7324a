@@ -1,0 +1,9 @@
+project: savantenvs/n2n
+target: fuzz_wire-mined-dc7324a
+# seed-from: https://app.mayhem.security/savantenvs/n2n/fuzz-wire
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_wire-mined-dc7324a/testsuite
+cmds:
+  - cmd: /mayhem/fuzz_wire
+    libfuzzer: true
